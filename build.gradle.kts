@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    kotlin("jvm") version "1.9.23"
 }
 
 group = "ru.otus.otuskotlin.dsl"
@@ -10,8 +10,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation(kotlin("test-junit5"))
 }
 
 tasks.test {
